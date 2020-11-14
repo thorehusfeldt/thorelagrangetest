@@ -85,14 +85,16 @@ bort fra de komplikationer, der optræder herved. Mængden af alle
 instanser af størrelse $n$ skrives som $mathscr I_n$ for $n \in mathbf N$. For
 instanser af størrelse $n$ kan vi interessere os for maksimale, minimale
 og gennemsnitlige kørselstider, defineret på følgende måde: [^1]
-$$T(n) = \begin{cases}
-  \max\{T(I)\colon I\in mathscr I_n} &
+\[
+T(n) = \begin{cases}
+  \max\{T(I)\colon I\in mathscr I_n\} &
   \text{»i værste fald«}\,, \\
-  \min\{T(I)\colon I\in mathscr I_n} &
+  \min\{T(I)\colon I\in mathscr I_n\} &
 \text{»i bedste fald«}\,, \\
       \displaystyle\frac{1}{|mathscr I_n|}\sum_{I\in \mathscr I_n}T(I) &
   \text{»i gennemsnit«}\,.
-\end{cases}$$ 
+\end{cases}
+\]
 Den mest interessante af disse størrelser er kørselstiden i
 værste fald, fordi den udgør den mest omfattende garanti for algoritmens
 opførelse. Sammenligningen af opførelsen i bedste og værste fald
