@@ -87,9 +87,9 @@ instanser af størrelse $n$ kan vi interessere os for maksimale, minimale
 og gennemsnitlige kørselstider, defineret på følgende måde: [^1]
 \[
 T(n) = \begin{cases}
-  \max\{T(I)\colon I\in mathscr I_n\} &
+  \max\{T(I)\colon I\in \mathscr I_n\} &
   \text{»i værste fald«}\,, \\
-  \min\{T(I)\colon I\in mathscr I_n\} &
+  \min\{T(I)\colon I\in \mathscr I_n\} &
 \text{»i bedste fald«}\,, \\
       \displaystyle\frac{1}{|mathscr I_n|}\sum_{I\in \mathscr I_n}T(I) &
   \text{»i gennemsnit«}\,.
@@ -139,8 +139,8 @@ Vi skal nu indføre den gængse notation for funktioners *asymptotiske
 opførsel*. Her betegner $f(n)$ og $g(n)$ funktioner, som afbilder
 naturlige tal til ikke-negative reelle tal. Vi definerer
 $$\begin{aligned}
-  O(f(n)) & = \{\,g(n)\colon\exists c>0\colon\exists n_0\inmathbf N_+\colon\forall n\geq n_0\colon g(n)\leq c\cdot f(n)\}\,,\\
-\Omega(f(n)) & = \{\,g(n)\colon\exists c>0\colon\exists n_0\inmathbf N_+\colon\forall n\geq n_0\colon g(n)\geq c\cdot f(n)\,\}\,,\\
+  O(f(n)) & = \{\,g(n)\colon\exists c>0\colon\exists n_0\in\mathbf N_+\colon\forall n\geq n_0\colon g(n)\leq c\cdot f(n)\}\,,\\
+\Omega(f(n)) & = \{\,g(n)\colon\exists c>0\colon\exists n_0\in\mathbf N_+\colon\forall n\geq n_0\colon g(n)\geq c\cdot f(n)\,\}\,,\\
   \Theta(f(n)) & = O(f(n))\cap{}\Omega(f(n))\,,\\
 o(f(n)) & = \{\,g(n)\colon\forall c>0\colon\exists n_0\inmathbf N_+\colon\forall n\geq n_0\colon g(n)\leq c\cdot f(n)\,\}\,,\\
 \omega(f(n)) & = \{\,g(n)\colon\forall c>0\colon\exists n_0\inmathbf N_+\colon\forall n\geq n_0\colon g(n)\geq c\cdot f(n)\,\}\,.\end{aligned}$$
