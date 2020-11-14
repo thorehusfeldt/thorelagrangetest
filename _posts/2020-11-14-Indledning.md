@@ -14,7 +14,7 @@ Indledning
 \vspace*{-4.5cm}
 ![image](img/stonehenge2.eps){width="5cm"}
 
-\aufmacher{\noindent Hvis man vil blive billedhugger,\footnote{%
+\aufmacher{\noindent Hvis man vil blive billedhugger,\footnote{
 Billedet af stenkredsen ved Stonehenge er taget fra \cite{Pin1808}.}
 skal man lære en masse grundlæggende teknikker:
 Hvor finder man passende sten?
