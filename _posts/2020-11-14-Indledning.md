@@ -1,7 +1,11 @@
---- layout: post title: \"Indledning\" author: \"Thore\" categories:
-journal tags: \[documentation,sample\] image: cards.jpg ---
-
-\# Indledning
+---
+layout: post
+title: "Indledning"
+author: "Thore"
+categories: journal
+tags: [documentation,sample]
+image: cards.jpg
+---
 
 Indledning
 ==========
