@@ -177,10 +177,11 @@ sådanne funktioner. Det næste resultat ser nærmere på polynomier i det
 asymptotiske perspektiv; beviset giver nogle eksempler på omgangen med
 notationen.
 
-\llabel{lem:polynomial}
-Lad $p(n)=\sum_{i=0}^ka_in^i$ være et polynomium med reelle
-koefficienter, hvor $a_k>0$. Da gælder $p(n)\in \Theta(n^k)$.
+**Lemma 2.1.**
+*Lad $p(n)=\sum_{i=0}^ka_in^i$ være et polynomium med reelle
+koefficienter, hvor $a_k>0$. Da gælder $p(n)\in \Theta(n^k)$.*
 
+*Bevis*.
 Vi skal vise $p(n)\in O(n^k)$ og $p(n)\in \Omega(n^k)$. Vi bemærker
 først, at der for $n>0$ gælder
 $$p(n)\leq\sum_{i=0}^k\abs{a_i}n^i\leq n^k\sum_{i=0}^k\abs{a_i}\,,$$
@@ -193,6 +194,7 @@ og derfor $p(n) \geq (\frac{1}{2}a_k)n^k$ for $n > 2A/a_k$. Ved at vælge
 $c=\frac{1}{2}a_k$ og $n_0=2A/a_k$ i definitionen af $\Omega(n^k)$ ses
 nu, at $p(n)$ tilhører $\Omega(n^k)$.
 
+**Opgave 2.1**
 Sandt eller falskt? (a) $n^2 + 10^6 n \in O(n^2)$; (b) $n \log n
 \in O(n)$; (c) $n \log n \in \Omega(n)$; (d) $\log n \in o(n)$.
 
@@ -217,17 +219,19 @@ $n\to\infty$. Ækvivalent skrives $(1+o(1))f(n)$. Vi bruger denne
 notation, når vi vil understrege $f(n)$s rolle som »*førende term*«, i
 forhold til hvilken »*termer af lavere orden*« kan ignoreres.
 
-\llabel{lem:ocalculus}
-Der gælder: $$\begin{aligned}
+**Lemma 2.2 (regneregler).**
+*Der gælder*
+$$\begin{aligned}
 cf(n)&=\Theta(f(n))\text{, for hver positive konstant $c$,}\\
 f(n)+g(n)&=\Omega(f(n))\,,\\
 f(n)+g(n)&=O(f(n))\text{, når }g(n)=O(f(n))\,,\\
 O(f(n)) \cdot O(g(n)) &= O(f(n) \cdot g(n))\,.\end{aligned}$$
 
-Bevis lemma .
+**Opgave 2.2.** Bevis lemma .
 
-Skærp lemma  ved at vise $p(n)=a_kn^k+o(n^k)$.
+**Opgave 2.3.** Skærp lemma  ved at vise $p(n)=a_kn^k+o(n^k)$.
 
+**Opgave 2.4.** 
 Bevis, at der gælder $n^k = o(c^n)$ for heltal $k$ og vilkårligt
 $c > 1$. Hvor står $n^{\log\log n}$ i forhold til $n^k$ og $c^n$?
 
