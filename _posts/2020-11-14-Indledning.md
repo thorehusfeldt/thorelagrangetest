@@ -64,7 +64,7 @@ algoritmers opførsel, bl.a. deres kørselstid, som er både præcise,
 kortfattede, almentgyldige og begribelige. Det er selvfølgeligt
 vanskeligt at opfylde alle disse krav samtidigt. For fx at beskrive
 algoritmens tidsforbrug $T$ kan man opfatte $T$ som en funktion, der
-afbilder mængden $mathscr I$ af alle mulige probleminstanser (eller
+afbilder mængden $\mathscr I$ af alle mulige probleminstanser (eller
 *input*) til mængden $\RR_+$ af positive reelle tal. For hver instans
 $\Input$ til problemet er da $T(\Input)$ kørselstiden på $\Input$. Denne
 detaljeringsgrad fører dog til så overvældende meget information, at det
@@ -82,7 +82,7 @@ Sommetider bruger man mere end én parameter for at angive størrelsen
 på en instans; fx er det gængs at karakteriser størrelsen på en graf i
 termer af både antal knuder og antal kanter. Vi vil i første omgang se
 bort fra de komplikationer, der optræder herved. Mængden af alle
-instanser af størrelse $n$ skrives som $mathscr I_n$ for $n \in mathbf N$. For
+instanser af størrelse $n$ skrives som $\mathscr I_n$ for $n \in mathbf N$. For
 instanser af størrelse $n$ kan vi interessere os for maksimale, minimale
 og gennemsnitlige kørselstider, defineret på følgende måde: [^1]
 \[
@@ -91,7 +91,7 @@ T(n) = \begin{cases}
   \text{»i værste fald«}\,, \\
   \min\{T(I)\colon I\in \mathscr I_n\} &
 \text{»i bedste fald«}\,, \\
-      \displaystyle\frac{1}{|mathscr I_n|}\sum_{I\in \mathscr I_n}T(I) &
+      \displaystyle\frac{1}{|\mathscr I_n|}\sum_{I\in \mathscr I_n}T(I) &
   \text{»i gennemsnit«}\,.
 \end{cases}
 \]
@@ -238,8 +238,8 @@ Bevis, at der gælder $n^k = o(c^n)$ for heltal $k$ og vilkårligt
 $c > 1$. Hvor står $n^{\log\log n}$ i forhold til $n^k$ og $c^n$?
 
 [^1]: Vi vil altid sikre, at mængden
-    $\setGilt{T(\Input)}{\Input\inmathscr I_n}$ har både maksimum og
-    minimum, og at mængden $mathscr I_n$ er endelig, når vi beregner
+    $\{T(I)\colon I\in\mathscr I_n\}$ har både maksimum og
+    minimum, og at mængden $\mathscr I_n$ er endelig, når vi beregner
     gennemsnit.
 
 [^2]: Ovs. anm.: Ordet »asymptotisk« er kendt fra matematisk analyse,
