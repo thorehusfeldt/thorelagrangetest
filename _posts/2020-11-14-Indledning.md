@@ -10,11 +10,9 @@ image: cards.jpg
 Indledning
 ==========
 
-\llabel{}
-\vspace*{-4.5cm}
 ![image](img/stonehenge2.eps){width="5cm"}
 
-\aufmacher{\noindent Hvis man vil blive billedhugger,\footnote{
+Hvis man vil blive billedhugger,\footnote{
 Billedet af stenkredsen ved Stonehenge er taget fra \cite{Pin1808}.}
 skal man lære en masse grundlæggende teknikker:
 Hvor finder man passende sten?
@@ -23,7 +21,7 @@ Når de grundlæggende teknikker er på plads, er man langtfra nogen berømt kun
  Wer die Grundtechniken beherrscht, 
 Man behøver ikke kende det hele, inden man går i gang med sin første skulptur
 Men man skal være parat til at gå tilbage til grundteknikkerne for at blive bedre og bedre.
-}
+
 Dette indledende kapitel spiller en lignende rolle i bogen. Vi
 præsenterer de grundlæggende begreber og metoder for at bedre kunne
 beskrive og analysere algoritmer i de senere kapitler. Man behøver ikke
@@ -61,13 +59,12 @@ historiske anmærkninger og videre resultater (afsnit ).
 Asymptotisk notation
 --------------------
 
-\llabel{s:o}
 Algoritmeanalysens formål er primært at skabe tilforladelige udsagn om
 algoritmers opførsel, bl.a. deres kørselstid, som er både præcise,
 kortfattede, almentgyldige og begribelige. Det er selvfølgeligt
 vanskeligt at opfylde alle disse krav samtidigt. For fx at beskrive
 algoritmens tidsforbrug $T$ kan man opfatte $T$ som en funktion, der
-afbilder mængden $\Inputs$ af alle mulige probleminstanser (eller
+afbilder mængden $mathscr I$ af alle mulige probleminstanser (eller
 *input*) til mængden $\RR_+$ af positive reelle tal. For hver instans
 $\Input$ til problemet er da $T(\Input)$ kørselstiden på $\Input$. Denne
 detaljeringsgrad fører dog til så overvældende meget information, at det
@@ -85,17 +82,18 @@ Sommetider bruger man mere end én parameter for at angive størrelsen
 på en instans; fx er det gængs at karakteriser størrelsen på en graf i
 termer af både antal knuder og antal kanter. Vi vil i første omgang se
 bort fra de komplikationer, der optræder herved. Mængden af alle
-instanser af størrelse $n$ skrives som $\Inputs_n$ for $n \in \NN$. For
+instanser af størrelse $n$ skrives som $mathscr I_n$ for $n \in mathbf N$. For
 instanser af størrelse $n$ kan vi interessere os for maksimale, minimale
 og gennemsnitlige kørselstider, defineret på følgende måde: [^1]
 $$T(n) = \begin{cases}
-  \max\setGilt{T(\Input)}{\Input\in\Inputs_n} &
+  \max\{T(I)\colon I\in mathscr I_n} &
   \text{»i værste fald«}\,, \\
-  \min\setGilt{T(\Input)}{\Input\in\Inputs_n} &
+  \min\{{T(I)\colon I\in mathscr I_n} &
 \text{»i bedste fald«}\,, \\
-      \displaystyle\frac{1}{|\Inputs_n|}\sum_{\Input\in \Inputs_n}T(\Input) &
+      \displaystyle\frac{1}{|mathscr I_n|}\sum_{I\in \mathscr I_n}T(I) &
   \text{»i gennemsnit«}\,.
-\end{cases}$$ Den mest interessante af disse størrelse er kørselstiden i
+\end{cases}$$ 
+Den mest interessante af disse størrelser er kørselstiden i
 værste fald, fordi den udgør den mest omfattende garanti for algoritmens
 opførelse. Sammenligningen af opførelsen i bedste og værste fald
 fortæller os, hvor stor variation i kørselstid der kan forekomme mellem
@@ -139,11 +137,11 @@ Vi skal nu indføre den gængse notation for funktioners *asymptotiske
 opførsel*. Her betegner $f(n)$ og $g(n)$ funktioner, som afbilder
 naturlige tal til ikke-negative reelle tal. Vi definerer
 $$\begin{aligned}
-  O(f(n)) & = \{\,g(n)\colon\exists c>0\colon\exists n_0\in\NN_+\colon\forall n\geq n_0\colon g(n)\leq c\cdot f(n)\}\,,\\
-\Omega(f(n)) & = \{\,g(n)\colon\exists c>0\colon\exists n_0\in\NN_+\colon\forall n\geq n_0\colon g(n)\geq c\cdot f(n)\,\}\,,\\
+  O(f(n)) & = \{\,g(n)\colon\exists c>0\colon\exists n_0\inmathbf N_+\colon\forall n\geq n_0\colon g(n)\leq c\cdot f(n)\}\,,\\
+\Omega(f(n)) & = \{\,g(n)\colon\exists c>0\colon\exists n_0\inmathbf N_+\colon\forall n\geq n_0\colon g(n)\geq c\cdot f(n)\,\}\,,\\
   \Theta(f(n)) & = O(f(n))\cap{}\Omega(f(n))\,,\\
-o(f(n)) & = \{\,g(n)\colon\forall c>0\colon\exists n_0\in\NN_+\colon\forall n\geq n_0\colon g(n)\leq c\cdot f(n)\,\}\,,\\
-\omega(f(n)) & = \{\,g(n)\colon\forall c>0\colon\exists n_0\in\NN_+\colon\forall n\geq n_0\colon g(n)\geq c\cdot f(n)\,\}\,.\end{aligned}$$
+o(f(n)) & = \{\,g(n)\colon\forall c>0\colon\exists n_0\inmathbf N_+\colon\forall n\geq n_0\colon g(n)\leq c\cdot f(n)\,\}\,,\\
+\omega(f(n)) & = \{\,g(n)\colon\forall c>0\colon\exists n_0\inmathbf N_+\colon\forall n\geq n_0\colon g(n)\geq c\cdot f(n)\,\}\,.\end{aligned}$$
 Venstresiderne læses som »store-o af $f(n)$« og tilsvarende for
 »store-omega«, »theta«, »lille-o« og »lille-omega«. Læg mærke til, at
 »$f(n)$« i udtrykket »$O(f(n))$« og »$g(n)$« i udtrykket
@@ -234,8 +232,8 @@ Bevis, at der gælder $n^k = o(c^n)$ for heltal $k$ og vilkårligt
 $c > 1$. Hvor står $n^{\log\log n}$ i forhold til $n^k$ og $c^n$?
 
 [^1]: Vi vil altid sikre, at mængden
-    $\setGilt{T(\Input)}{\Input\in\Inputs_n}$ har både maksimum og
-    minimum, og at mængden $\Inputs_n$ er endelig, når vi beregner
+    $\setGilt{T(\Input)}{\Input\inmathscr I_n}$ har både maksimum og
+    minimum, og at mængden $mathscr I_n$ er endelig, når vi beregner
     gennemsnit.
 
 [^2]: Ovs. anm.: Ordet »asymptotisk« er kendt fra matematisk analyse,
