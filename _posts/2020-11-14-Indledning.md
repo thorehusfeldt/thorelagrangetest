@@ -88,7 +88,7 @@ og gennemsnitlige kørselstider, defineret på følgende måde: [^1]
 $$T(n) = \begin{cases}
   \max\{T(I)\colon I\in mathscr I_n} &
   \text{»i værste fald«}\,, \\
-  \min\{{T(I)\colon I\in mathscr I_n} &
+  \min\{T(I)\colon I\in mathscr I_n} &
 \text{»i bedste fald«}\,, \\
       \displaystyle\frac{1}{|mathscr I_n|}\sum_{I\in \mathscr I_n}T(I) &
   \text{»i gennemsnit«}\,.
